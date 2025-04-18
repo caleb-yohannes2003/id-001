@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Earthstone Landscaping</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white">
+<header class="fixed top-0 left-0 z-50 w-full backdrop-blur bg-white/30 border-b border-gray-300 shadow-md" id="header">
+<div class="flex items-center justify-center px-6 py-4 w-full">
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="services.html">Services</a>
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="index.html#about">About Us</a>
+<a class="border px-5 py-2 text-sm rounded bg-yellow-900 text-white duration-200 hover:bg-green-700" href="index.html">Earthstone Landscaping</a>
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="contact.html">Contact Us</a>
+</nav>
+<!-- Dropdown Container (outside nav) -->
+<div class="relative hidden lg:block ml-6" x-data="{ open: false }">
+<!-- Trigger Button -->
+<button @click="open = !open" class="flex items-center gap-1 py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105">
+            More Info
+            <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Dropdown Menu -->
+<div @click.outside="open = false" class="absolute right-0 mt-2 w-48 bg-white/80 backdrop-blur rounded shadow-lg border border-gray-200 py-2 z-50" x-show="open" x-transition="">
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="contact.html#consultation">Book a Consultation</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="contact.html#careers">Careers</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="index.html#faq">FAQ</a>
+</div>
+</div>
+</div>
+</header>
+<section class="relative h-screen overflow-hidden" id="hero">
+<!-- Background image with dark overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Background" class="w-full h-full object-cover blur-[5px]" src="https://media.istockphoto.com/id/114334874/photo/landscaped-garden-and-stone-paved-driveway.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=qkZ3vdTBBecw7bExT7bAOFC20QjuBHTzNd4CmgefoW0="/>
+<div class="absolute inset-0 bg-black opacity-40"></div>
+</div>
+<!-- Text content -->
+<div class="relative z-10 flex h-full w-full items-center justify-center">
+<div class="text-center text-white px-4">
+<h1 class="mb-4 text-5xl font-bold md:text-7xl lg:text-8xl">
+            Committed to Quality - Committed to You
+          </h1>
+<p class="mb-8 text-lg md:text-xl">
+            Creating stunning landscapes that enhance your home’s beauty and value
+            with expert craftsmanship.
+          </p>
+<div class="mt-12 flex justify-center md:mt-18 lg:mt-20">
+<a class="rounded-button bg-green-700 inline-flex gap-3 items-center justify-center whitespace-nowrap transition-transformation duration-200 transform hover:scale-105 hover:bg-green-800 ease-in-out disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none border border-border-primary text-text-primary bg-background-primary px-6 py-3" href="contact.html#consultation" title="Request A Quote">
+              Book A Free Consultation
+            </a>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-neutral-50 px-[5%] pt-16 pb-20 md:pt-24 md:pb-20 lg:pt-10 lg:pb-20" id="about">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+<div>
+<h2 class="rb-5 mb-5 text-6xl font-bold md:mb-6 md:text-14xl lg:text-16xl text-green-800">
+              Discover Our Passion for Landscaping Excellence
+            </h2>
+<p class="md:text-md">
+              At our landscaping company, we are dedicated to transforming outdoor
+              spaces into beautiful, functional environments. Our mission is to
+              provide exceptional service and innovative designs that reflect our
+              clients' unique visions.
+            </p>
+<div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+<a class="rounded-button inline-flex gap-3 items-center justify-center whitespace-nowrap transition-transform duration-200 transform hover:scale-[1.05] hover:text-green-900 ease-in-out disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none border-0 text-text-primary bg-background-primary px-6 py-3" href="services.html" title="Learn More">
+                Learn More
+              </a>
+</div>
+</div>
+<div class="bg-neutral-300 rounded-lg w-full aspect-video flex items-center justify-center">
+<div class="w-1/5 opacity-40">
+<svg class="text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div> <!-- This closing div was missing -->
+</div>
+</section>
+<section class="bg-green-700 text-white px-[5%] py-16 md:py-24 lg:py-28" id="our-services">
+<div class="container mx-auto">
+<div class="flex flex-col items-center">
+<div class="rb-12 mb-12 w-full max-w-xl md:max-w-2xl lg:max-w-4xl md:mb-18 lg:mb-20 mx-auto">
+<h2 class="text-5xl leading-[1.2] font-bold md:text-5xl lg:text-4xl text-center">
+          Transform Your Outdoor Space with Our Expert Landscaping Services.
+        </h2>
+</div>
+<div class="grid grid-cols-1 items-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12">
+<!-- Design & Custom Features -->
+<div>
+<h3 class="mb-5 text-xl font-bold md:mb-6 md:text-2xl">
+            Custom Landscape &amp; Garden Design
+          </h3>
+<p class="mb-5 md:mb-6">
+            We create stunning designs tailored to your space, including pools, water features, and gardens.
+          </p>
+<div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+<a class="rounded-button inline-flex items-center justify-center whitespace-nowrap transition-transform duration-200 transform hover:scale-[1.10] ease-in-out border-0 text-text-primary gap-2 bg-transparent p-0" href="contact.html">
+              Request a Quote
+              <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Hardscaping & Masonry -->
+<div>
+<h3 class="mb-5 text-xl font-bold md:mb-6 md:text-2xl">
+            Durable Hardscaping &amp; Masonry
+          </h3>
+<p class="mb-5 md:mb-6">
+            Elevate your outdoor space with flagstone, concrete, steps, retaining walls, and custom stonework.
+          </p>
+<div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+<a class="rounded-button inline-flex items-center justify-center whitespace-nowrap transition-transform duration-200 transform hover:scale-[1.10] ease-in-out border-0 text-text-primary gap-2 bg-transparent p-0" href="services.html">
+              Explore Work
+              <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Lawn & Property Maintenance -->
+<div>
+<h3 class="mb-5 text-xl font-bold md:mb-6 md:text-2xl">
+            Complete Lawn &amp; Property Care
+          </h3>
+<p class="mb-5 md:mb-6">
+            From turf to drainage, we keep your yard lush, level, and worry-free with expert upkeep.
+          </p>
+<div class="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+<a class="rounded-button inline-flex items-center justify-center whitespace-nowrap transition-transform duration-200 transform hover:scale-[1.10] ease-in-out border-0 text-text-primary gap-2 bg-transparent p-0" href="contact.html#consultation">
+              Book Service
+              <svg fill="none" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 15 15" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M6.1584 3.13508C6.35985 2.94621 6.67627 2.95642 6.86514 3.15788L10.6151 7.15788C10.7954 7.3502 10.7954 7.64949 10.6151 7.84182L6.86514 11.8418C6.67627 12.0433 6.35985 12.0535 6.1584 11.8646C5.95694 11.6757 5.94673 11.3593 6.1356 11.1579L9.565 7.49985L6.1356 3.84182C5.94673 3.64036 5.95694 3.32394 6.1584 3.13508Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white px-[5%] py-20" id="awards">
+<div class="container mx-auto text-center">
+<h2 class="text-4xl font-bold text-green-800 mb-8">Awards &amp; Certifications</h2>
+<p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      We are proud to be recognized and certified by leading industry organizations that stand for quality, safety, and professionalism.
+    </p>
+<div class="flex justify-center items-center">
+<img alt="Awards and Certifications" class="max-w-full w-[700px] h-auto object-contain" src="https://assets.landscapeontario.com/assets/1593801421.certification_logos.png"/>
+</div>
+</div>
+</section>
+<section class="bg-green-700 text-white px-[5%] py-16 md:py-24 lg:py-10" id="testimonials">
+<div class="container mx-auto px-6">
+<div class="mb-12 w-full md:mb-18 lg:mb-20">
+<h1 class="mb-5 text-5xl font-bold text-center md:mb-6 md:text-7xl lg:text-8xl">
+            Testimonials
+          </h1>
+</div>
+<div class="mx-auto grid max-w-7xl grid-cols-1 gap-y-12 md:grid-cols-2 lg:grid-cols-3 md:gap-x-8 lg:gap-30 justify-items-center">
+<!-- Testimonial 1 (Kristina Kerr) -->
+<div class="flex h-full w-full max-w-lg flex-col items-start justify-start text-left">
+<div class="mb-6 flex md:mb-8">
+<!-- Star Icons -->
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+</div>
+<blockquote class="text-md font-bold leading-[1.4] md:text-xl">
+              "The ONLY option for a landscaping in Durham Region! Professionalism and quality work from start to finish. Would never trust anyone but Qasim and EarthStone Landscaping. Wish I could rate 10 stars."
+            </blockquote>
+<div class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:w-auto md:flex-row md:items-center md:gap-5">
+<div>
+<img alt="Kristina Kerr avatar" class="size-14 min-h-14 min-w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/a-/ALV-UjXRum3mLBi52LICfpTX1Bnecyn-CRzaeUSyejc19gMgaBXS0cE9=w60-h60-p-rp-mo-br100"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="font-semibold leading-tight">Kristina Kerr</p>
+<p class="leading-tight">Local Guide</p>
+</div>
+<div class="hidden w-px self-stretch bg-black md:block"></div>
+</div>
+</div>
+<!-- Testimonial 2 (Jeff) -->
+<div class="flex h-full w-full max-w-lg flex-col items-start justify-start text-left">
+<div class="mb-6 flex md:mb-8">
+<!-- Star Icons -->
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+</div>
+<blockquote class="text-md font-bold leading-[1.4] md:text-xl">
+              "Really enjoyed having Qasim work on our property. He was super friendly with my family and made the process enjoyable! He was real patient with us as we delayed and changed the scope of work on him but he had great solutions and stayed within budget. Thanks so much Qasim!"
+            </blockquote>
+<div class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:w-auto md:flex-row md:items-center md:gap-5">
+<div>
+<img alt="Jeff Woods avatar" class="size-14 min-h-14 min-w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/a/ACg8ocKsfPucyl5bgB__HmShAVrBMrYy2SOlEzJPT1yU2ZA5ISXIYA=w60-h60-p-rp-mo-br100"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="font-semibold leading-tight">Jeff Woods</p>
+<p class="leading-tight">Homeowner, Happy Client</p>
+</div>
+<div class="hidden w-px self-stretch bg-black md:block"></div>
+</div>
+</div>
+<!-- Testimonial 3 (Demetri) -->
+<div class="flex h-full w-full max-w-lg flex-col items-start justify-start text-left">
+<div class="mb-6 flex md:mb-8">
+<!-- Star Icons -->
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+<svg class="size-6" fill="currentColor" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="..."></path></svg>
+</div>
+<blockquote class="text-md font-bold leading-[1.4] md:text-xl">
+              "Extremely happy. Can't go wrong with Qasim. Honest, hard working. Offered suggestions and happy with price. I definitely recommend this company. Great guy!"
+            </blockquote>
+<div class="mt-6 flex w-full flex-col gap-3 md:mt-8 md:w-auto md:flex-row md:items-center md:gap-5">
+<div>
+<img alt="Demetri Christodoulopoulos avatar" class="size-14 min-h-14 min-w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/a-/ALV-UjWWOLY_uoqAjx25ab-WH0-886W8jlpP8UMm1viHFMqALxuiMgSF=w60-h60-p-rp-mo-br100"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="font-semibold leading-tight">Demetri Christodoulopoulos</p>
+<p class="leading-tight">Homeowner, Happy Client</p>
+</div>
+<div class="hidden w-px self-stretch bg-black md:block"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-neutral-50 px-[5%] py-16 md:py-24 lg:py-28" id="faq">
+<div class="container mx-auto">
+<div class="mb-12 w-full max-w-lg mx-auto text-center md:mb-18 lg:mb-20">
+<h2 class="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl text-green-700">
+            FAQs
+          </h2>
+<p class="md:text-md">
+            Find answers to your most common landscaping questions right here.
+          </p>
+</div>
+<div class="space-y-8 max-w-3xl mx-auto">
+<!-- FAQ Item 1 -->
+<div class="border-b pb-6">
+<h3 class="text-xl font-bold mb-2">What services do you offer?</h3>
+<p class="text-md md:text-lg">
+              We offer full-service landscaping, including turf installation, garden design,
+              hardscaping, pool landscaping, and maintenance.
+            </p>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border-b pb-6">
+<h3 class="text-xl font-bold mb-2">How do I get a quote?</h3>
+<p class="text-md md:text-lg">
+              You can request a quote by contacting us through
+              our website's contact form. We’ll schedule a site visit and provide a
+              free estimate.
+            </p>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border-b pb-6">
+<h3 class="text-xl font-bold mb-2">Do you offer maintenance?</h3>
+<p class="text-md md:text-lg">
+              Yes! We offer ongoing maintenance services to keep your yard looking its
+              best year-round.
+            </p>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border-b pb-6">
+<h3 class="text-xl font-bold mb-2">What is your service area?</h3>
+<p class="text-md md:text-lg">
+              We serve the entire local region of Ajax and surrounding neighborhoods. Contact
+              us to confirm if we cover your area.
+            </p>
+</div>
+<!-- FAQ Item 5 -->
+<div class="border-b pb-6">
+<h3 class="text-xl font-bold mb-2">What are your hours?</h3>
+<p class="text-md md:text-lg">
+              Our standard hours are Monday–Friday from 7am to 7pm.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-yellow-900 relative px-[5%] py-16 md:py-24 lg:py-28" id="cta">
+<!-- Foreground content -->
+<div class="relative z-10 container max-w-xl mx-auto text-center text-white">
+<h2 class="mb-5 text-4xl font-extrabold md:mb-6 md:text-5xl lg:text-6xl">
+          Get Your Dream Landscape Today
+        </h2>
+<p class="text-base md:text-lg">
+          Transform your outdoor space with our expert landscaping services. Contact
+          us for a free quote!
+        </p>
+<!-- Button -->
+<div class="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
+<a href="contact.html">
+<button class="border border-white text-white font-semibold px-6 py-3 rounded-md hover:scale-[1.05] hover:bg-green-800 transition" title="Request a Quote">
+            Request a Quote
+          </button>
+</a>
+</div>
+</div>
+</section>
+<footer id="footer">
+<div class="w-full bg-green-800 text-white">
+<div class="grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 px-10 py-5 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20">
+<a class="lg:justify-self-start" href="index.html"><img alt="Logo image" class="inline-block" src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"/></a>
+<ul class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start">
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="index.html#about">About Us</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="services.html">Services</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="contact.html">Contact Us</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="index.html#faq">FAQs</a></li>
+</ul>
+<div class="flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end">
+<a href="https://www.facebook.com/EarthStoneLandscaping/"><svg class="size-6 transition-transform duration-200 transform hover:scale-[1.15]" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg></a><a href="https://www.instagram.com/earthstone.landscaping/"><svg class="size-6 transition-transform duration-200 transform hover:scale-[1.15]" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
+<circle cx="16.806" cy="7.207" r="1.078"></circle>
+<path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg></a>
+</div>
+</div>
+<div class="h-px w-full bg-white"></div>
+<div class="text-center py-6 text-sm">
+<p class="font-semibold tracking-wide pb-1">Hours of Operation</p>
+<p>Monday – Friday: 7:00 AM – 7:00 PM</p>
+</div>
+<div class="flex flex-col-reverse items-center justify-center justify-items-center pt-6 pb-4 text-sm md:flex-row md:gap-x-6 md:pt-8 md:pb-0">
+<ul class="grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
+<p class="mt-8 md:mt-0 pb-5">© 2025 Made by Design Altura. All rights reserved.</p>
+</ul>
+</div>
+</div>
+</footer>
+</body>
+</html>

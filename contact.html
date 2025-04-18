@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Earthstone Landscaping</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white"><header class="fixed top-0 left-0 z-50 w-full backdrop-blur bg-white/30 border-b border-gray-300 shadow-md" id="header">
+<div class="flex items-center justify-center px-6 py-4 w-full">
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="services.html">Services</a>
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="index.html#about">About Us</a>
+<a class="border px-5 py-2 text-sm rounded bg-yellow-900 text-white duration-200 hover:bg-green-700" href="index.html">Earthstone Landscaping</a>
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="contact.html">Contact Us</a>
+</nav>
+<!-- Dropdown Container (outside nav) -->
+<div class="relative hidden lg:block ml-6" x-data="{ open: false }">
+<!-- Trigger Button -->
+<button @click="open = !open" class="flex items-center gap-1 py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105">
+            More Info
+            <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Dropdown Menu -->
+<div @click.outside="open = false" class="absolute right-0 mt-2 w-48 bg-white/80 backdrop-blur rounded shadow-lg border border-gray-200 py-2 z-50" x-show="open" x-transition="">
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="contact.html#consultation">Book a Consultation</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="contact.html#careers">Careers</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="index.html#faq">FAQ</a>
+</div>
+</div>
+</div>
+</header>
+<section class="px-[5%] py-16 md:py-24 lg:py-28" id="contact-form">
+<div>
+<div class="grid grid-cols-1 items-start gap-y-12 md:grid-flow-row md:grid-cols-2 md:gap-x-12 lg:grid-flow-col lg:gap-x-20 lg:gap-y-16 pb-10">
+<div>
+<div class="mb-6 md:mb-8">
+<h2 class="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl text-green-700">
+                Get in Touch
+              </h2>
+<p class="md:text-md">We're here to assist you.</p>
+</div>
+<div class="grid grid-cols-1 gap-4 py-2">
+<div class="flex items-center gap-4">
+<svg class="size-6 flex-none" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z">
+</path>
+</svg>
+<p>Earthandstonecontractors@gmail.com</p>
+</div>
+<div class="flex items-center gap-4">
+<svg class="size-6 flex-none" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001z">
+</path>
+</svg>
+<p>416-371-0820</p>
+</div>
+<div class="flex items-center gap-4">
+<svg class="size-6 flex-none" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z">
+</path>
+<path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z">
+</path>
+</svg>
+<p>2 Westney Rd S, Ajax, ON L1S 6P9</p>
+</div>
+<div class="flex items-center gap-4">
+<svg class="size-6 flex-none" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 8c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0-6C6.486 2 2 6.486 2 12c0 3.108 1.417 5.897 3.656 7.75l1.414-1.414A7.948 7.948 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8c0 1.894-.66 3.631-1.75 5.07l1.414 1.414A9.955 9.955 0 0 0 22 12c0-5.514-4.486-10-10-10z">
+</path>
+<path d="M13 12h-2V7h2v5z"></path>
+</svg>
+<p>Hours: Monday–Friday, 7am–7pm</p>
+</div>
+</div>
+</div>
+<form class="grid grid-cols-1 grid-rows-[auto_auto] gap-6 pt-20">
+<div class="grid w-full items-center">
+<label class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2" for="name">Name</label>
+<div class="relative flex w-full items-center">
+<input class="rounded-input flex size-full py-2 align-middle transition-all duration-200 border border-gray-500 bg-background-primary min-h-11 px-3 focus-visible:outline-none" id="name" type="text"/>
+</div>
+</div>
+<div class="grid w-full items-center">
+<label class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2" for="email">Email</label>
+<div class="relative flex w-full items-center">
+<input class="rounded-input flex size-full py-2 align-middle transition-all duration-200 border border-gray-500 bg-background-primary min-h-11 px-3 focus-visible:outline-none" id="email" type="email"/>
+</div>
+</div>
+<div class="grid w-full items-center">
+<label class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2" for="reason">Reason for
+                Contact</label>
+<div class="relative flex w-full items-center">
+<select class="rounded-input flex size-full py-2 align-middle transition-all duration-200 border border-gray-500 bg-background-primary min-h-11 px-3 focus-visible:outline-none" id="reason" name="reason" required="">
+<option value="">Select a reason</option>
+<option value="Quote">Quote</option>
+<option value="Other (Please add your reason for contact in the message)">Other (Please add your reason for contact in the message)</option>
+</select>
+</div>
+</div>
+<div class="grid w-full items-center">
+<label class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2" for="message">Message</label>
+<textarea class="flex w-full border border-gray-500 bg-neutral-white p-3 placeholder:text-neutral focus-visible:outline-none min-h-[11.25rem] overflow-auto" id="message" placeholder="Write your message..."></textarea>
+</div>
+<div>
+<button class="rounded-button inline-flex gap-3 items-center justify-center whitespace-nowrap transition-transform duration-200 transform hover:scale-105 hover:bg-yellow-800 hover:text-white ease-in-out border border-gray-500 bg-background-alternative text-text-alternative px-6 py-3" title="Send">
+                Send
+              </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<div class="w-full h-px bg-gray-300"></div>
+</body><body>
+<section class="scroll-mt-20" id="consultation">
+<form class="space-y-6 bg-white p-8 shadow rounded-lg border border-gray-200 max-w-2xl mx-auto" onsubmit="return validateServices();">
+<h2 class="text-3xl font-bold text-green-700 text-center mb-4">Book a Free Consultation</h2>
+<div>
+<label class="block font-medium mb-2" for="services">What services are you interested in?</label>
+<select class="w-full border border-gray-300 rounded p-3 h-48" id="services" multiple="" name="services" required="">
+<option value="Artificial turf installation">Artificial turf installation</option>
+<option value="Concrete masonry">Concrete masonry</option>
+<option value="Driveway landscaping">Driveway landscaping</option>
+<option value="Driveway or walkway paving">Driveway or walkway paving</option>
+<option value="Garden decorating">Garden decorating</option>
+<option value="Garden design">Garden design</option>
+<option value="Gardening services">Gardening services</option>
+<option value="Grading &amp; resloping">Grading &amp; resloping</option>
+<option value="Hardscaping">Hardscaping</option>
+<option value="Landscape design">Landscape design</option>
+<option value="Outdoor step construction">Outdoor step construction</option>
+<option value="Outdoor water feature design">Outdoor water feature design</option>
+<option value="Pool landscaping">Pool landscaping</option>
+<option value="Retaining walls">Retaining walls</option>
+<option value="Rock landscaping">Rock landscaping</option>
+<option value="Sod installation">Sod installation</option>
+<option value="Stone landscaping">Stone landscaping</option>
+<option value="Stone masonry">Stone masonry</option>
+<option value="Tree landscaping">Tree landscaping</option>
+<option value="Walkway landscaping">Walkway landscaping</option>
+<option value="Yard drainage">Yard drainage</option>
+<option value="Yard grading">Yard grading</option>
+<option value="Yard landscaping">Yard landscaping</option>
+<option value="Flagstone">Flagstone</option>
+<option value="Gardens">Gardens</option>
+<option value="Hardscaping">Hardscaping</option>
+<option value="None">None of the services listed</option>
+</select>
+<p class="text-sm text-gray-500 mt-2">Hold CTRL (Windows) or CMD (Mac) to select multiple options.</p>
+<p class="text-red-600 mt-2 hidden" id="error-message">Please select at least one valid service.</p>
+</div>
+<div class="text-center">
+<button class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800 transition" type="submit">
+            Book Consultation
+          </button>
+</div>
+</form>
+<script>
+        function validateServices() {
+          const select = document.getElementById('services');
+          const selected = Array.from(select.selectedOptions).map(opt => opt.value);
+          const errorMsg = document.getElementById('error-message');
+
+          if (selected.includes("None") || selected.length === 0) {
+            errorMsg.classList.remove('hidden');
+            return false;
+          }
+
+          errorMsg.classList.add('hidden');
+          return true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+          const select = document.getElementById('services');
+
+          select.addEventListener('change', function () {
+            const selectedValues = Array.from(this.selectedOptions).map(opt => opt.value);
+
+            if (selectedValues.includes("None") && selectedValues.length > 1) {
+              for (let option of this.options) {
+                option.selected = option.value === "None";
+              }
+            }
+          });
+        });
+      </script>
+</section>
+<div class="w-full h-px bg-gray-300"></div>
+</body><body>
+<section class="bg-gray-100 px-6 py-20" id="careers">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl font-bold text-green-700 mb-4">Join Our Team</h2>
+<p class="text-gray-700 mb-10 text-lg">We're currently hiring for the following positions:</p>
+<!-- Open Position Card -->
+<div class="bg-white p-6 rounded-lg shadow border border-gray-400 max-w-xl mx-auto text-left">
+<h3 class="text-2xl font-semibold mb-2">Labourer</h3>
+<p class="text-gray-600 mb-4">
+        We're looking for hardworking and reliable individuals to join our crew. No experience required — just a strong work ethic and willingness to learn.
+      </p>
+<ul class="list-disc list-inside text-gray-600 mb-4">
+<li>Full-time and part-time positions available</li>
+<li>Outdoor work and physical activity</li>
+<li>Competitive pay</li>
+</ul>
+<a class="inline-block mt-4 px-6 py-3 bg-green-700 text-white rounded hover:bg-green-800 transition" href="contact.html">
+        Apply Now
+      </a>
+</div>
+<!-- Work Perks Summary -->
+<p class="text-sm text-gray-500 mt-12 max-w-2xl mx-auto">
+      We offer competitive pay, outdoor hands-on work, flexible scheduling with full-time and part-time options, and a supportive team environment. Join us and build something meaningful.
+    </p>
+</div>
+</section>
+</body><footer id="footer">
+<div class="w-full bg-green-800 text-white">
+<div class="grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 px-10 py-5 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20">
+<a class="lg:justify-self-start" href="#"><img alt="Logo image" class="inline-block" src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"/></a>
+<ul class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start">
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="index.html#about">About Us</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="services.html">Services</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="contact.html">Contact Us</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="index.html#faq">FAQs</a></li>
+</ul>
+<div class="flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end">
+<a href="https://www.facebook.com/EarthStoneLandscaping/"><svg class="size-6 transition-transform duration-200 transform hover:scale-[1.15]" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg></a><a href="https://www.instagram.com/earthstone.landscaping/"><svg class="size-6 transition-transform duration-200 transform hover:scale-[1.15]" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
+<circle cx="16.806" cy="7.207" r="1.078"></circle>
+<path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg></a>
+</div>
+</div>
+<div class="h-px w-full bg-white"></div>
+<div class="text-center py-6 text-sm">
+<p class="font-semibold tracking-wide pb-1">Hours of Operation</p>
+<p>Monday – Friday: 7:00 AM – 7:00 PM</p>
+</div>
+<div class="flex flex-col-reverse items-center justify-center justify-items-center pt-6 pb-4 text-sm md:flex-row md:gap-x-6 md:pt-8 md:pb-0">
+<ul class="grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
+<p class="mt-8 md:mt-0 pb-5">© 2025 Made by Design Altura. All rights reserved.</p>
+</ul>
+</div>
+</div>
+</footer>
+</body>
+</html>

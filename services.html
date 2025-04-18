@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<style>
+  [x-cloak] { display: none !important; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800"><header class="fixed top-0 left-0 z-50 w-full backdrop-blur bg-white/30 border-b border-gray-300 shadow-md" id="header">
+<div class="flex items-center justify-center px-6 py-4 w-full">
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="services.html">Services</a>
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="index.html#about">About Us</a>
+<a class="border px-5 py-2 text-sm rounded bg-yellow-900 text-white duration-200 hover:bg-green-700" href="index.html">Earthstone Landscaping</a>
+<a class="py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105" href="contact.html">Contact Us</a>
+</nav>
+<!-- Dropdown Container (outside nav) -->
+<div class="relative hidden lg:block ml-6" x-data="{ open: false }">
+<!-- Trigger Button -->
+<button @click="open = !open" class="flex items-center gap-1 py-2 text-base transition-transform duration-200 transform hover:text-green-400 hover:scale-105">
+            More Info
+            <svg :class="{ 'rotate-180': open }" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Dropdown Menu -->
+<div
+  @click.outside="open = false"
+  class="absolute right-0 mt-2 w-48 bg-white/80 backdrop-blur rounded shadow-lg border border-gray-200 py-2 z-50"
+  x-show="open"
+  x-transition
+  x-cloak
+>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="contact.html#consultation">Book a Consultation</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="contact.html#careers">Careers</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="index.html#faq">FAQ</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Header -->
+<section class="bg-white text-center py-20 px-6 mt-5" id="services">
+<h1 class="text-5xl font-bold mb-4 text-green-700">Our Landscaping Services</h1>
+<p class="text-lg max-w-2xl mx-auto">From planting to patios — we help bring your outdoor space to life.</p>
+</section>
+<!-- Planting & Garden Care -->
+<section class="py-20 px-6 bg-green-700 text-white">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-4">Planting &amp; Garden Care</h2>
+<p class="text-lg mb-4">We provide expert planting, tree care, and year-round garden maintenance services.</p>
+<ul class="list-disc list-inside space-y-2">
+<li>Gardening services</li>
+<li>Garden decorating</li>
+<li>Tree landscaping</li>
+<li>Sod installation</li>
+<li>Garden maintenance &amp; cleanup</li>
+</ul>
+</div>
+<div>
+<img alt="Planting &amp; Garden Care" class="w-full h-64 object-cover rounded-lg" src="https://plus.unsplash.com/premium_photo-1661513907453-b747a962142b?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbnRpbmclMjBhbmQlMjBnYXJkZW4lMjBjYXJlJTIwbGFuZHNjYXBpbmd8ZW58MHx8MHx8fDA%3D"/>
+</div>
+</div>
+</section>
+<!-- Hardscaping & Masonry -->
+<section class="py-20 px-6 bg-white">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<img alt="Hardscaping &amp; Masonry" class="w-full h-64 object-cover rounded-lg" src="https://media.istockphoto.com/id/1428026698/photo/hardscape-details-of-a-tumbled-paver-patio-flagstone-stepping-stones-and-horizontal-cedar.webp?a=1&amp;b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=tJA9jmgFiW6M1x3upsvgApfBeBfBXxkMFPGJqRQtG3c="/>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="text-3xl font-bold text-green-700 mb-4">Hardscaping &amp; Masonry</h2>
+<p class="text-gray-600 text-lg mb-4">Durable and beautiful surfaces designed with stone, concrete, and creative flair.</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2">
+<li>Concrete masonry</li>
+<li>Stone masonry</li>
+<li>Stone &amp; rock landscaping</li>
+<li>Flagstone patios &amp; paths</li>
+<li>Custom hardscape installations</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Driveways, Walkways & Steps -->
+<section class="py-20 px-6 bg-yellow-800 text-white">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-4">Driveways, Walkways &amp; Steps</h2>
+<p class="text-lg mb-4">Built to impress and last — paths, drives and stairs done right.</p>
+<ul class="list-disc list-inside space-y-2">
+<li>Driveway landscaping &amp; paving</li>
+<li>Walkway installation</li>
+<li>Flagstone &amp; paver paths</li>
+<li>Outdoor step construction</li>
+</ul>
+</div>
+<div>
+<img alt="Driveways, Walkways &amp; Steps" class="w-full h-64 object-cover rounded-lg" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/468044024_18018642509631062_4634855332544158296_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=9HiLj4mJNL0Q7kNvwGCUz6C&amp;_nc_oc=Adl8yyJXwpdNWhZFwCQal3O1u9-UmNTkUlaUSbHXaRAWkdeBlWxLQM0bFg3_LM4CZaw&amp;_nc_zt=23&amp;_nc_ht=scontent-yyz1-1.xx&amp;_nc_gid=dYwMbdCE_dGzugfvVZQBIA&amp;oh=00_AfHg5T4SicIQ7CSTrFYHZYvJXpI5JoVPW2djbGcb8WULrA&amp;oe=68072FC2"/>
+</div>
+</div>
+</section>
+<!-- Artificial Turf Installation -->
+<section class="py-20 px-6 bg-white">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<img alt="Artificial Turf Installation" class="w-full h-64 object-cover rounded-lg" src="https://plus.unsplash.com/premium_photo-1678677946710-11b13820d9a4?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHVyZiUyMGluc3RhbGxhdGlvbnxlbnwwfHwwfHx8MA%3D%3D"/>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="text-3xl font-bold text-green-700 mb-4">Artificial Turf Installation</h2>
+<p class="text-gray-600 text-lg mb-4">Enjoy a lush, green lawn all year with low-maintenance artificial turf.</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2">
+<li>Durable and pet-friendly</li>
+<li>Perfect for low-maintenance lifestyles</li>
+<li>Great for poolside, patios, and play areas</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Grading, Drainage & Retaining -->
+<section class="py-20 px-6 bg-green-700 text-white">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-4">Grading, Drainage &amp; Retaining</h2>
+<p class="text-lg mb-4">Ensure your yard’s structure and health with expert grading and water management.</p>
+<ul class="list-disc list-inside space-y-2">
+<li>Yard grading &amp; resloping</li>
+<li>Yard drainage systems</li>
+<li>Retaining wall construction</li>
+<li>Complete yard landscaping</li>
+</ul>
+</div>
+<div>
+<img alt="Grading &amp; Drainage" class="w-full h-64 object-cover rounded-lg" src="https://plus.unsplash.com/premium_photo-1678677946745-47819646a87e?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHJhaW5hZ2UlMjBsYW5kc2NhcGluZ3xlbnwwfHwwfHx8MA%3D%3D"/>
+</div>
+</div>
+</section>
+<!-- Design & Custom Features -->
+<section class="py-20 px-6 bg-white text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl font-bold text-green-700 mb-4">Design &amp; Custom Features</h2>
+<p class="text-gray-600 text-lg mb-4">Tailored landscape designs that include standout elements and modern features.</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2 text-left inline-block">
+<li>Landscape &amp; garden design</li>
+<li>Outdoor water feature design</li>
+<li>Custom pool landscaping</li>
+<li>Design consultations &amp; planning</li>
+</ul>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="bg-yellow-800 text-white text-center py-16 px-6">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Yard?</h2>
+<p class="mb-8 text-lg">Contact us today for a free consultation and let’s get started.</p>
+<a href="contact.html">
+<button class="border border-white text-white font-semibold px-6 py-3 rounded-md hover:scale-[1.05] hover:bg-green-800 transition" title="Get a Free Quote">
+            Get a Free Quote
+          </button>
+</a>
+</section>
+<footer id="footer">
+<div class="w-full bg-green-700 text-white">
+<div class="grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 px-10 py-5 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20">
+<a class="lg:justify-self-start" href="#"><img alt="Logo image" class="inline-block" src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"/></a>
+<ul class="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start">
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="index.html#about">About Us</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="services.html">Services</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="contact.html">Contact Us</a></li>
+<li class="font-semibold transition-transform duration-200 transform hover:text-yellow-700"><a href="index.html#faq">FAQs</a></li>
+</ul>
+<div class="flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end">
+<a href="https://www.facebook.com/EarthStoneLandscaping/"><svg class="size-6 transition-transform duration-200 transform hover:scale-[1.15]" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg></a><a href="https://www.instagram.com/earthstone.landscaping/"><svg class="size-6 transition-transform duration-200 transform hover:scale-[1.15]" fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
+<circle cx="16.806" cy="7.207" r="1.078"></circle>
+<path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg></a>
+</div>
+</div>
+<div class="h-px w-full bg-white"></div>
+<div class="text-center py-6 text-sm">
+<p class="font-semibold tracking-wide pb-1">Hours of Operation</p>
+<p>Monday – Friday: 7:00 AM – 7:00 PM</p>
+</div>
+<div class="flex flex-col-reverse items-center justify-center justify-items-center pt-6 pb-4 text-sm md:flex-row md:gap-x-6 md:pt-8 md:pb-0">
+<ul class="grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
+<p class="mt-8 md:mt-0 pb-5">© 2025 Made by Design Altura. All rights reserved.</p>
+</ul>
+</div>
+</div>
+</footer></body>
+</html>
